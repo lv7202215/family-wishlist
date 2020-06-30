@@ -1,6 +1,6 @@
 import { RouteRecordRaw, createRouter, createWebHashHistory } from 'vue-router';
-import HOME_ROUTER from "@/router/modules/home"; // 首页
-import ABOUT_ROUTER from "@/router/modules/about"; // ABOUT
+import LIVING_ROOM_ROUTER from "@/router/modules/living-room"; // 客厅
+import BEDROOM_ROUTER from "@/router/modules/bedroom"; // 卧室
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -8,8 +8,8 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Index',
     component: () => import(/* webpackChunkName: "home" */ "@/views/index.vue"),
     children:[
-      ...HOME_ROUTER,
-      ...ABOUT_ROUTER
+      ...LIVING_ROOM_ROUTER,
+      ...BEDROOM_ROUTER
     ]
   }
 ]

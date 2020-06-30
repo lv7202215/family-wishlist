@@ -1,35 +1,34 @@
 <template>
-  <section class="slide_menu">
+  <div class="bedroom">
     <ul>
-      <li v-for="(item,index) in routerOption.children" :key="index" @click="jumpFun(item.path)">
+      <li v-for="(item,index) in roomOptions.children" :key="index" @click="jumpFun(item.path)">
         {{item.meta.title}}
       </li>
     </ul>
-  </section>
+    <router-view></router-view>
+  </div>
 </template>
 
 <script lang="ts">
   import {readonly} from "vue"
   import {useRouter} from "vue-router";
-  import router from "@/router/index";
-
+  import BEDROOM_ROUTER from "@/router/modules/bedroom";
   export default {
     setup() {
-      // 1级菜单列表
-      const routerOption = readonly(
-        router.options.routes[0]
+      // 卧室列表
+      const roomOptions = readonly(
+        BEDROOM_ROUTER[0]
       )
-      // 跳转
       const routers = useRouter()
       const jumpFun = (params: string) => routers.push(params)
       return {
-        routerOption,
+        roomOptions,
         jumpFun
       }
     }
   }
 </script>
 
-<style lang="stylus">
+<style scoped lang="stylus">
   @import "./index.styl"
 </style>

@@ -1,6 +1,6 @@
 <template>
-  <div class="about">
-    this is about page
+  <div>
+    次卧
   </div>
 </template>
 
@@ -17,5 +17,5 @@
 </script>
 
 <style scoped lang="stylus">
-  @import "./index.styl"
+  @import "../index.styl"
 </style>

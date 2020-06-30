@@ -2,11 +2,9 @@
 $main-font = 14px
 $main-light = #61dafb
 $main-dark = #20232a
-$main-border-color = #ddd
 $main-padding = 15px
 $main-margin = 15px
 $main-radius = 5px
-$main-shadow = 3px
 
 /* mixins */
 border-radius(n)
@@ -14,5 +12,5 @@ border-radius(n)
   -moz-border-radius n
   border-radius n
 
-box-shadow(n=3,color=$main-border-color)
- box-shadow n n 2*n color
+box-shadow(n=3px,color=$main-dark)
+ box-shadow n n 2n color

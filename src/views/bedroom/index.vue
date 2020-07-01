@@ -1,6 +1,6 @@
 <template>
   <div class="bedroom">
-    <ul>
+    <ul class="bedroom-nav">
       <li v-for="(item,index) in roomOptions.children" :key="index" @click="jumpFun(item.path)">
         {{item.meta.title}}
       </li>

@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="living-room">
     客厅
   </div>
 </template>
